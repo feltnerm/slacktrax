@@ -12,6 +12,7 @@
    [clojure.test :as test]
    [clojure.tools.namespace.repl :refer [refresh refresh-all]]
    [slacktrax.core]
+   [slacktrax.aws.lambda]
    [clojure.test :refer [run-tests]]
    [slacktrax.core-test]
    [slacktrax.lib.slack-test]

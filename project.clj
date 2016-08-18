@@ -7,6 +7,7 @@
                  [org.clojure/data.json "0.2.6"]
                  [org.clojure/core.match "0.3.0-alpha4"]
                  [clj-time "0.11.0"]
+                 [amazonica "0.3.51"]
                  [org.julienxx/clj-slack "0.5.2.1"]]
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
