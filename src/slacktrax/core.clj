@@ -19,7 +19,7 @@
                                                                           timeago-interval-dt))
         connection          (slack/make-connection slack-token)
         channel-messages    (slack/channel-message-history connection slack-channel timeago)]
-    (println (stats/gather-stats channel-messages))))
+    (pprint/pprint (stats/gather-stats channel-messages))))
 
 (defn test
   "Call -main with test options for REPL-driven-development"

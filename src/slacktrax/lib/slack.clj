@@ -1,8 +1,6 @@
 (ns slacktrax.lib.slack
   "Functions for interacting with the Slack API"
   (:require [clj-slack.users :as users]
-            [clj-slack.stars :as stars]
-            [clj-slack.reactions :as reactions]
             [clj-slack.search :as search]
             [clj-slack.channels :as channels]))
 
@@ -55,8 +53,7 @@
     (:messages messages)))
 
 (defn channel-message-history
-  "Get all the messages in a channel for its current users including stars
-  and reactions per message for all users."
+  "Get all the messages in a channel until `end-time`"
   [connection channel-name & [end-time]]
   (let [channel-messages          (get-messages-by-channel-name connection channel-name end-time)
         channel-members           (get-channel-members-by-channel-name connection channel-name)]
